@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Interface</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="bg-white border-bottom">
+        <div class="mobile-header-row d-md-none border-bottom pb-2">
+            <div class="mobile-brand d-flex align-items-center">
+                <a href="index.html" class="text-dark"><i class="bi bi-arrow-left me-3"
+                        style="font-size: 24px; color: #1c1c1c;"></i></a>
+                <span class="h5 text-dark mb-0 fw-medium">Shopping cart</span>
+            </div>
+        </div>
+
+        <div class="container-fluid py-3 px-xl-5 desktop-only">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="index.html"><img src="images/logo-colored.png" alt="Brand" class="brand-logo"></a>
+                </div>
+                <div class="col-lg-6 col-md-5 ms-lg-4">
+                    <div class="input-group search-group">
+                        <input type="text" class="form-control border-blue" placeholder="Search">
+                        <select class="form-select border-blue border-start-0 flex-grow-0" style="width: 140px;">
+                            <option selected>All category</option>
+                            <option value="1">Electronics</option>
+                            <option value="2">Clothes</option>
+                            <option value="3">Home interiors</option>
+                            <option value="4">Tools</option>
+                        </select>
+                        <button class="btn btn-primary px-4" type="button">Search</button>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-end text-center user-nav">
+                    <div class="dropdown ms-4">
+                        <div class="nav-item-box dropdown-toggle" data-bs-toggle="dropdown" role="button">
+                            <i class="bi bi-person-fill"></i><span>Profile</span>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                            <li><a class="dropdown-item" href="#">My Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item-box ms-4"><i class="bi bi-chat-dots-fill"></i><span>Message</span></div>
+                    <div class="nav-item-box ms-4"><i class="bi bi-heart-fill"></i><span>Orders</span></div>
+                    <a href="cart.html" class="nav-item-box ms-4 text-decoration-none" style="color: inherit;"><i
+                            class="bi bi-cart-fill"></i><span>My cart</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="background-color: #f8f9fa;" class="py-0 py-md-4 cart-page px-0 mx-0">
+        <div class="container-fluid px-xl-5 px-0">
+            <h4 class="fw-bold mb-4 pt-3 px-3 desktop-only">My cart (3)</h4>
+
+            <div class="row g-4">
+                <div class="col-lg-9">
+                    <div class="d-md-none bg-white" id="mobile-cart-container">
+                        <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer">
+                            <div class="d-flex w-100">
+                                <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                    style="width: 72px; height: 72px; flex-shrink: 0;">
+                                    <img src="images/Bitmap.png" alt="T-shirt"
+                                        style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="fw-normal text-dark mb-0 pe-2"
+                                            style="font-size: 15px; line-height: 1.3;">T-shirts with multiple colors for
+                                            men</h6>
+                                        <i class="bi bi-three-dots-vertical text-secondary"></i>
+                                    </div>
+                                    <p class="text-secondary mb-0" style="font-size: 13px;">Size: medium, Color: blue
+                                    </p>
+                                    <p class="text-secondary mb-3" style="font-size: 13px;">Seller: Artel Market</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="qty-box border rounded d-flex align-items-center bg-white"
+                                    style="height: 38px;">
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-right: 1px solid #dee2e6 !important;">-</button>
+                                    <span class="text-dark fw-medium text-center" style="width: 40px;">2</span>
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-left: 1px solid #dee2e6 !important;">+</button>
+                                </div>
+                                <div class="fw-bold fs-5 text-dark">$78.99</div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer">
+                            <div class="d-flex w-100">
+                                <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                    style="width: 72px; height: 72px; flex-shrink: 0;">
+                                    <img src="images/image 26.png" alt="Bag"
+                                        style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="fw-normal text-dark mb-0 pe-2"
+                                            style="font-size: 15px; line-height: 1.3;">Solid Backpack blue jeans large
+                                            size</h6>
+                                        <i class="bi bi-three-dots-vertical text-secondary"></i>
+                                    </div>
+                                    <p class="text-secondary mb-0" style="font-size: 13px;">Size: medium, Color: blue
+                                    </p>
+                                    <p class="text-secondary mb-3" style="font-size: 13px;">Seller: Artel Market</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="qty-box border rounded d-flex align-items-center bg-white"
+                                    style="height: 38px;">
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-right: 1px solid #dee2e6 !important;">-</button>
+                                    <span class="text-dark fw-medium text-center" style="width: 40px;">1</span>
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-left: 1px solid #dee2e6 !important;">+</button>
+                                </div>
+                                <div class="fw-bold fs-5 text-dark">$78.99</div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer">
+                            <div class="d-flex w-100">
+                                <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                    style="width: 72px; height: 72px; flex-shrink: 0;">
+                                    <img src="images/6.png" alt="Kettle"
+                                        style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="fw-normal text-dark mb-0 pe-2"
+                                            style="font-size: 15px; line-height: 1.3;">Water boiler black for kitchen,
+                                            1200 Watt</h6>
+                                        <i class="bi bi-three-dots-vertical text-secondary"></i>
+                                    </div>
+                                    <p class="text-secondary mb-0" style="font-size: 13px;">Size: medium, Color: blue
+                                    </p>
+                                    <p class="text-secondary mb-3" style="font-size: 13px;">Seller: Artel Market</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="qty-box border rounded d-flex align-items-center bg-white"
+                                    style="height: 38px;">
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-right: 1px solid #dee2e6 !important;">-</button>
+                                    <span class="text-dark fw-medium text-center" style="width: 40px;">2</span>
+                                    <button class="bg-transparent text-secondary border-0 px-3 fs-5"
+                                        style="width: 40px; border-left: 1px solid #dee2e6 !important;">+</button>
+                                </div>
+                                <div class="fw-bold fs-5 text-dark">$78.99</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border border-secondary-subtle rounded-3 shadow-sm p-3 desktop-only"
+                        id="desktop-cart-container">
+                        <div class="d-flex align-items-center border-bottom pb-3 mb-3 w-100">
+                            <div class="border rounded-2 p-2 bg-white me-3 d-flex align-items-center justify-content-center"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/Bitmap.png" class="img-fluid" alt="T-shirt"
+                                    style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                            <div class="flex-grow-1 pe-4">
+                                <h6 class="fw-medium text-dark mb-1 d-block" style="font-size: 16px;">T-shirts with
+                                    multiple colors, for men and lady</h6>
+                                <p class="text-secondary mb-2" style="font-size: 14px; line-height: 1.4;">Size: medium,
+                                    Color: blue, Material: Plastic<br>Seller: Artel Market</p>
+                                <div class="d-flex gap-2 mt-1">
+                                    <button class="btn btn-sm btn-outline-danger px-3 bg-white fw-medium"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                    <button class="btn btn-sm btn-outline-primary px-3 bg-white fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Save for later</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end justify-content-between ms-auto"
+                                style="height: 100px;">
+                                <span class="fw-bold text-dark fs-5">$78.99</span>
+                                <select class="form-select form-select-sm text-dark fw-medium"
+                                    style="width: 110px; height: 38px; font-size: 14px; border-color: #dee2e6;">
+                                    <option>Qty: 1</option>
+                                    <option>Qty: 2</option>
+                                    <option>Qty: 3</option>
+                                    <option>Qty: 4</option>
+                                    <option>Qty: 5</option>
+                                    <option>Qty: 6</option>
+                                    <option>Qty: 7</option>
+                                    <option>Qty: 8</option>
+                                    <option>Qty: 9</option>
+                                    <option>Qty: 10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center border-bottom pb-3 mb-3 w-100">
+                            <div class="border rounded-2 p-2 bg-white me-3 d-flex align-items-center justify-content-center"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/image 26.png" class="img-fluid" alt="Bag"
+                                    style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                            <div class="flex-grow-1 pe-4">
+                                <h6 class="fw-medium text-dark mb-1 d-block" style="font-size: 16px;">T-shirts with
+                                    multiple colors, for men and lady</h6>
+                                <p class="text-secondary mb-2" style="font-size: 14px; line-height: 1.4;">Size: medium,
+                                    Color: blue, Material: Plastic<br>Seller: Best factory LLC</p>
+                                <div class="d-flex gap-2 mt-1">
+                                    <button class="btn btn-sm btn-outline-danger px-3 bg-white fw-medium"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                    <button class="btn btn-sm btn-outline-primary px-3 bg-white fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Save for later</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end justify-content-between ms-auto"
+                                style="height: 100px;">
+                                <span class="fw-bold text-dark fs-5">$39.00</span>
+                                <select class="form-select form-select-sm text-dark fw-medium"
+                                    style="width: 110px; height: 38px; font-size: 14px; border-color: #dee2e6;">
+                                    <option>Qty: 1</option>
+                                    <option>Qty: 2</option>
+                                    <option>Qty: 3</option>
+                                    <option>Qty: 4</option>
+                                    <option>Qty: 5</option>
+                                    <option>Qty: 6</option>
+                                    <option>Qty: 7</option>
+                                    <option>Qty: 8</option>
+                                    <option>Qty: 9</option>
+                                    <option>Qty: 10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center pb-3 w-100">
+                            <div class="border rounded-2 p-2 bg-white me-3 d-flex align-items-center justify-content-center"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/6.png" class="img-fluid" alt="Lamp"
+                                    style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
+                            <div class="flex-grow-1 pe-4">
+                                <h6 class="fw-medium text-dark mb-1 d-block" style="font-size: 16px;">T-shirts with
+                                    multiple colors, for men and lady</h6>
+                                <p class="text-secondary mb-2" style="font-size: 14px; line-height: 1.4;">Size: medium,
+                                    Color: blue, Material: Plastic<br>Seller: Artel Market</p>
+                                <div class="d-flex gap-2 mt-1">
+                                    <button class="btn btn-sm btn-outline-danger px-3 bg-white fw-medium"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                    <button class="btn btn-sm btn-outline-primary px-3 bg-white fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Save for later</button>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end justify-content-between ms-auto"
+                                style="height: 100px;">
+                                <span class="fw-bold text-dark fs-5">$170.50</span>
+                                <select class="form-select form-select-sm text-dark fw-medium"
+                                    style="width: 110px; height: 38px; font-size: 14px; border-color: #dee2e6;">
+                                    <option selected>Qty: 1</option>
+                                    <option>Qty: 2</option>
+                                    <option>Qty: 3</option>
+                                    <option>Qty: 4</option>
+                                    <option>Qty: 5</option>
+                                    <option>Qty: 6</option>
+                                    <option>Qty: 7</option>
+                                    <option>Qty: 8</option>
+                                    <option>Qty: 9</option>
+                                    <option>Qty: 10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top w-100">
+                            <a href="index.html">
+                                <button
+                                    class="btn btn-primary px-4 fw-medium text-white d-flex align-items-center border-0 shadow-sm"
+                                    style="background-color: #0d6efd;"><i class="bi bi-arrow-left me-2"></i>Back to
+                                    shop</button>
+                            </a>
+                            <button class="btn btn-outline-primary px-4 fw-medium bg-white"
+                                style="border-color: #dee2e6;">Remove all</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-4 mt-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-secondary-subtle rounded-circle p-2 text-secondary"><i
+                                    class="bi bi-lock-fill"></i></div>
+                            <div>
+                                <p class="mb-0 fw-bold small">Secure payment</p>
+                                <p class="mb-0 text-secondary tiny-text">Have you ever finally just</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-secondary-subtle rounded-circle p-2 text-secondary"><i
+                                    class="bi bi-chat-dots-fill"></i></div>
+                            <div>
+                                <p class="mb-0 fw-bold small">Customer support</p>
+                                <p class="mb-0 text-secondary tiny-text">Have you ever finally just</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-secondary-subtle rounded-circle p-2 text-secondary"><i
+                                    class="bi bi-truck"></i></div>
+                            <div>
+                                <p class="mb-0 fw-bold small">Free delivery</p>
+                                <p class="mb-0 text-secondary tiny-text">Have you ever finally just</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="d-md-none p-3 mt-2 bg-white border-top">
+                        <div class="cart-summary-line mb-1"><span class="text-secondary fw-medium">Items
+                                (3):</span><span class="fw-bold text-dark">$32.00</span></div>
+                        <div class="cart-summary-line mb-1"><span class="text-secondary fw-medium">Shipping:</span><span
+                                class="fw-bold text-dark">$10.00</span></div>
+                        <div class="cart-summary-line mb-1"><span class="text-secondary fw-medium">Tax:</span><span
+                                class="fw-bold text-dark">$7.00</span></div>
+                        <div class="d-flex justify-content-between align-items-center mt-2 pt-2">
+                            <span class="fw-bold fs-5 text-dark">Total:</span>
+                            <span class="fw-bold fs-5 text-dark">$220.00</span>
+                        </div>
+                        <button class="btn btn-primary w-100 py-3 fw-bold mt-3 rounded-2 shadow-sm fs-6"
+                            style="background-color: #00B517; border: none;">Checkout</button>
+                    </div>
+
+                    <div class="card border border-secondary-subtle rounded-3 shadow-sm p-3 mb-3 desktop-only">
+                        <p class="mb-2 text-secondary" style="font-size: 15px;">Have a coupon?</p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Add coupon"
+                                style="border-color: #dee2e6; font-size: 15px;">
+                            <button class="btn btn-outline-primary fw-medium bg-white" type="button"
+                                style="border-color: #dee2e6;">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="card border border-secondary-subtle rounded-3 shadow-sm p-3 desktop-only text-dark">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-secondary" style="font-size: 15px;">Subtotal:</span>
+                            <span class="fw-medium" style="font-size: 15px;">$1403.97</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-secondary" style="font-size: 15px;">Discount:</span>
+                            <span class="text-danger fw-medium" style="font-size: 15px;">- $60.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
+                            <span class="text-secondary" style="font-size: 15px;">Tax:</span>
+                            <span class="text-success fw-medium" style="font-size: 15px;">+ $14.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="fw-bold fs-5">Total:</span>
+                            <span class="fw-bold fs-5">$1357.97</span>
+                        </div>
+                        <button class="btn btn-success w-100 py-3 fw-bold mb-3 rounded-2 shadow-sm fs-5"
+                            style="background-color: #00B517; border: none;">Checkout</button>
+                        <div class="text-center d-flex justify-content-center gap-2 flex-wrap">
+                            <img src="images/13.jpg" alt="Payments" style="max-width: 50px; max-height: 30px;">
+                            <img src="images/14.png" alt="Payments" style="max-width: 50px; max-height: 30px;">
+                            <img src="images/15.jpg" alt="Payments" style="max-width: 50px; max-height: 30px;">
+                            <img src="images/16.png" alt="Payments" style="max-width: 50px; max-height: 30px;">
+                            <img src="images/17.png" alt="Payments" style="max-width: 50px; max-height: 30px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-md-none mt-3 pb-4 bg-white">
+                <h5 class="fw-bold mb-3 px-3 title-only-row pb-2 pt-3">Saved for later</h5>
+                <div class="saved-list">
+                    <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer border-top">
+                        <div class="d-flex w-100">
+                            <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/image 86.png"
+                                    style="max-height: 100%; max-width: 100%; object-fit: contain;" alt="Headphones">
+                            </div>
+                            <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h6 class="text-secondary fw-normal mb-1" style="font-size: 15px;">Regular Fit
+                                        Resort Shirt</h6>
+                                    <div class="fw-bold text-dark fs-5 mb-2">$57.70</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm px-3 fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Move to cart</button>
+                                    <button class="btn btn-outline-danger btn-sm px-3 fw-medium bg-white"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer">
+                        <div class="d-flex w-100">
+                            <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/12.jpg" style="max-height: 100%; max-width: 100%; object-fit: contain;"
+                                    alt="Smartphone">
+                            </div>
+                            <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h6 class="text-secondary fw-normal mb-1" style="font-size: 15px;">Regular Fit
+                                        Resort Shirt</h6>
+                                    <div class="fw-bold text-dark fs-5 mb-2">$57.70</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm px-3 fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Move to cart</button>
+                                    <button class="btn btn-outline-danger btn-sm px-3 fw-medium bg-white"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 border-bottom rounded-0 p-3 mb-0 pointer">
+                        <div class="d-flex w-100">
+                            <div class="bg-white border rounded me-3 d-flex align-items-center justify-content-center p-1"
+                                style="width: 80px; height: 80px; flex-shrink: 0;">
+                                <img src="images/11.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"
+                                    alt="Smartwatch">
+                            </div>
+                            <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h6 class="text-secondary fw-normal mb-1" style="font-size: 15px;">Regular Fit
+                                        Resort Shirt</h6>
+                                    <div class="fw-bold text-dark fs-5 mb-2">$57.70</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm px-3 fw-medium"
+                                        style="font-size: 13px; border-color: #dee2e6;">Move to cart</button>
+                                    <button class="btn btn-outline-danger btn-sm px-3 fw-medium bg-white"
+                                        style="font-size: 13px; color: #d9534f !important; border-color: #dee2e6;">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid px-xl-5 mt-4 mb-5 desktop-only">
+                <div class="card border border-secondary-subtle bg-white shadow-sm p-4">
+                    <h5 class="fw-bold mb-4">Saved for later</h5>
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                        <div class="col">
+                            <div class="card border-0 rounded-3 h-100 p-3 bg-white"
+                                style="box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <div class="bg-light rounded-2 mb-3 d-flex align-items-center justify-content-center p-3"
+                                    style="height: 180px;">
+                                    <img src="images/image 32.png" class="img-fluid"
+                                        style="max-height: 100%; object-fit: contain;" alt="Tablet">
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="fw-bold fs-5 text-dark mb-1 d-block">$99.50</h6>
+                                    <p class="small text-secondary mb-3 mt-1"
+                                        style="font-size: 14px; line-height: 1.4;">GoPro HERO6 4K Action Camera - Black
+                                    </p>
+                                    <button
+                                        class="btn btn-outline-primary btn-sm px-3 d-flex align-items-center fw-medium bg-white"
+                                        style="font-size: 14px; border-color: #dee2e6;">
+                                        <i class="bi bi-cart3 fs-5 me-2"></i> Move to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-0 rounded-3 h-100 p-3 bg-white"
+                                style="box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <div class="bg-light rounded-2 mb-3 d-flex align-items-center justify-content-center p-3"
+                                    style="height: 180px;">
+                                    <img src="images/12.jpg" class="img-fluid"
+                                        style="max-height: 100%; object-fit: contain;" alt="iPhone">
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="fw-bold fs-5 text-dark mb-1 d-block">$99.50</h6>
+                                    <p class="small text-secondary mb-3 mt-1"
+                                        style="font-size: 14px; line-height: 1.4;">GoPro HERO6 4K Action Camera - Black
+                                    </p>
+                                    <button
+                                        class="btn btn-outline-primary btn-sm px-3 d-flex align-items-center fw-medium bg-white"
+                                        style="font-size: 14px; border-color: #dee2e6;">
+                                        <i class="bi bi-cart3 fs-5 me-2"></i> Move to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-0 rounded-3 h-100 p-3 bg-white"
+                                style="box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <div class="bg-light rounded-2 mb-3 d-flex align-items-center justify-content-center p-3"
+                                    style="height: 180px;">
+                                    <img src="images/11.png" class="img-fluid"
+                                        style="max-height: 100%; object-fit: contain;" alt="Watch">
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="fw-bold fs-5 text-dark mb-1 d-block">$99.50</h6>
+                                    <p class="small text-secondary mb-3 mt-1"
+                                        style="font-size: 14px; line-height: 1.4;">GoPro HERO6 4K Action Camera - Black
+                                    </p>
+                                    <button
+                                        class="btn btn-outline-primary btn-sm px-3 d-flex align-items-center fw-medium bg-white"
+                                        style="font-size: 14px; border-color: #dee2e6;">
+                                        <i class="bi bi-cart3 fs-5 me-2"></i> Move to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-0 rounded-3 h-100 p-3 bg-white"
+                                style="box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                                <div class="bg-light rounded-2 mb-3 d-flex align-items-center justify-content-center p-3"
+                                    style="height: 180px;">
+                                    <img src="images/image 34.png" class="img-fluid"
+                                        style="max-height: 100%; object-fit: contain;" alt="Laptop">
+                                </div>
+                                <div class="mt-auto">
+                                    <h6 class="fw-bold fs-5 text-dark mb-1 d-block">$99.50</h6>
+                                    <p class="small text-secondary mb-3 mt-1"
+                                        style="font-size: 14px; line-height: 1.4;">GoPro HERO6 4K Action Camera - Black
+                                    </p>
+                                    <button
+                                        class="btn btn-outline-primary btn-sm px-3 d-flex align-items-center fw-medium bg-white"
+                                        style="font-size: 14px; border-color: #dee2e6;">
+                                        <i class="bi bi-cart3 fs-5 me-2"></i> Move to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid px-xl-5 my-5">
+                <div
+                    class="discount-banner d-flex justify-content-between align-items-center p-4 p-md-5 rounded-3 text-white">
+                    <div>
+                        <h3 class="fw-bold mb-1">Super discount on more than 100 USD</h3>
+                        <p class="mb-0 opacity-75">Have you ever finally just write dummy info</p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-warning btn-lg px-4 py-2 fw-medium border-0 shadow-sm text-white"
+                            style="background-color: #FF9017;">
+                            Shop now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white pt-5">
+        <div class="container-fluid px-xl-5">
+            <div class="row mb-5">
+                <div class="col-lg-3 mb-4">
+                    <img src="images/logo-colored.png" alt="Brand" class="brand-logo mb-3">
+                    <p class="text-secondary pe-lg-5">Best information about the company goes here but now lorem ipsum
+                        is</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Partnership</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Information</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-1 mb-4">
+                    <h6 class="fw-bold mb-3">For users</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Get app</h6>
+                    <a href="#" class="d-block mb-2"><img src="images/market-button.png" width="120"
+                            alt="App Store"></a>
+                    <a href="#" class="d-block"><img src="images/Group.png" width="120" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light border-top py-3">
+            <div class="container-fluid px-xl-5 d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-secondary">© 2023 Ecommerce.</p>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex align-items-center fw-medium" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" id="headerLanguageDropdown">
+                        <img src="images/us@2x.png" alt="" class="me-2 selected-img"
+                            style="width:20px; height:15px; object-fit: cover;">
+                        <span>English</span>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm overflow-auto"
+                        style="max-height: 400px; min-width: 200px;">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/DE@2x.png"
+                                    class="me-2" style="width:20px;"> Germany</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/AE@2x.png"
+                                    class="me-2" style="width:20px;"> Arabic Emirates</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/icon.png"
+                                    class="me-2" style="width:20px;"> Australia</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/us@2x.png"
+                                    class="me-2" style="width:20px;"> United States</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/ru@2x.png"
+                                    class="me-2" style="width:20px;"> Russia</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/it@2x.png"
+                                    class="me-2" style="width:20px;"> Italy</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/dk@2x.png"
+                                    class="me-2" style="width:20px;"> Denmark</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/fr@2x.png"
+                                    class="me-2" style="width:20px;"> France</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/cn@2x.png"
+                                    class="me-2" style="width:20px;"> China</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/gb@2x.png"
+                                    class="me-2" style="width:20px;"> Great Britain</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

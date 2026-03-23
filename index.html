@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="bg-white border-bottom">
+        <div class="mobile-header-row d-md-none">
+            <div class="mobile-brand d-flex align-items-center">
+                <i class="bi bi-list me-3" style="font-size: 24px;"></i>
+                <a href="index.html"><img src="images/logo-colored.png" alt="Brand" style="height: 38px;"></a>
+            </div>
+            <div class="mobile-icons d-flex align-items-center">
+                <a href="cart.html" style="color: inherit;"><i class="bi bi-cart3 me-3"
+                        style="font-size: 24px;"></i></a>
+                <i class="bi bi-person" style="font-size: 24px;"></i>
+            </div>
+        </div>
+        <div class="mobile-search-row d-md-none">
+            <div class="input-group bg-light rounded">
+                <span class="input-group-text bg-transparent border-0"><i class="bi bi-search"
+                        style="color: #888;"></i></span>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search">
+            </div>
+        </div>
+        <div class="mobile-nav-tags d-md-none">
+            <a href="list.html" class="nav-tag-item active">All category</a>
+            <a href="list.html" class="nav-tag-item">Gadgets</a>
+            <a href="list.html" class="nav-tag-item">Clocthes</a>
+            <a href="list.html" class="nav-tag-item">Accessories</a>
+        </div>
+
+        <div class="container-fluid py-3 px-xl-5 desktop-only">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="index.html"><img src="images/logo-colored.png" alt="Brand" class="brand-logo"></a>
+                </div>
+                <div class="col-lg-6 col-md-5 ms-lg-4">
+                    <div class="input-group search-group">
+                        <input type="text" class="form-control border-blue" placeholder="Search">
+                        <select class="form-select border-blue border-start-0 flex-grow-0" style="width: 140px;">
+                            <option selected>All category</option>
+                            <option value="1">Electronics</option>
+                            <option value="2">Clothes</option>
+                            <option value="3">Home interiors</option>
+                            <option value="4">Tools</option>
+                        </select>
+                        <button class="btn btn-primary px-4" type="button">Search</button>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-end text-center user-nav">
+                    <div class="dropdown ms-4">
+                        <div class="nav-item-box dropdown-toggle" data-bs-toggle="dropdown" role="button">
+                            <i class="bi bi-person-fill"></i><span>Profile</span>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                            <li><a class="dropdown-item" href="#">My Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item-box ms-4"><i class="bi bi-chat-dots-fill"></i><span>Message</span></div>
+                    <div class="nav-item-box ms-4"><i class="bi bi-heart-fill"></i><span>Orders</span></div>
+                    <a href="cart.html" class="nav-item-box ms-4 text-decoration-none" style="color: inherit;"><i
+                            class="bi bi-cart-fill"></i><span>My cart</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="border-top py-2 desktop-only">
+            <div class="container-fluid d-flex justify-content-between align-items-center px-xl-5">
+                <ul class="nav main-nav">
+                    <li class="nav-item me-3"><a href="#" class="nav-link text-dark fw-medium px-0"><i
+                                class="bi bi-list me-2"></i>All category</a></li>
+                    <li class="nav-item mx-3"><a href="#" class="nav-link text-dark px-0">Hot offers</a></li>
+                    <li class="nav-item mx-3"><a href="#" class="nav-link text-dark px-0">Gift boxes</a></li>
+                    <li class="nav-item mx-3"><a href="#" class="nav-link text-dark px-0">Projects</a></li>
+                    <li class="nav-item mx-3"><a href="#" class="nav-link text-dark px-0">Menu item</a></li>
+                    <li class="nav-item mx-3 d-flex align-items-center">
+                        <select class="form-select border-0 bg-transparent text-dark fw-medium p-0"
+                            style="box-shadow: none; cursor: pointer; width: auto; font-size: 16px;">
+                            <option value="center" selected>Help</option>
+                            <option value="contact">Contact Us</option>
+                            <option value="shipping">Shipping Info</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center settings-nav">
+                    <div class="me-4 d-flex align-items-center">
+                        <select class="form-select border-0 bg-transparent text-dark fw-medium ps-0 pe-4"
+                            style="box-shadow: none; cursor: pointer; width: auto; font-size: 16px; background-position: right center;">
+                            <option value="en-usd" selected>English, USD</option>
+                            <option value="ar-aed">Arabic, AED</option>
+                            <option value="fr-eur">French, EUR</option>
+                        </select>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium d-flex align-items-center" href="#"
+                            data-bs-toggle="dropdown">
+                            Ship to <img src="images/DE@2x.png" alt="" class="ms-2"
+                                style="width:22px; height:15px; object-fit: cover;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm overflow-auto"
+                            style="max-height: 400px; min-width: 200px;">
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/DE@2x.png"
+                                        class="me-2" style="width:20px;"> Germany</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/AE@2x.png"
+                                        class="me-2" style="width:20px;"> Arabic Emirates</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/icon.png"
+                                        class="me-2" style="width:20px;"> Australia</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/us@2x.png"
+                                        class="me-2" style="width:20px;"> United States</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/ru@2x.png"
+                                        class="me-2" style="width:20px;"> Russia</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/it@2x.png"
+                                        class="me-2" style="width:20px;"> Italy</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/dk@2x.png"
+                                        class="me-2" style="width:20px;"> Denmark</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/fr@2x.png"
+                                        class="me-2" style="width:20px;"> France</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/cn@2x.png"
+                                        class="me-2" style="width:20px;"> China</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/gb@2x.png"
+                                        class="me-2" style="width:20px;"> Great Britain</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="background-color: #f8f9fa;" class="pb-5">
+        <div class="container-fluid px-xl-5 my-4">
+            <div class="hero-card-wrapper p-3 bg-white border rounded shadow-sm">
+                <div class="row g-3">
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <ul class="list-group list-group-flush sidebar-nav" id="sidebarMenu">
+                            <a href="list.html"
+                                class="list-group-item list-group-item-action sidebar-link">Automobiles</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Clothes and wear</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Home interiors</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Computer and
+                                tech</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Tools,
+                                equipments</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Sports and
+                                outdoor</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Animal and pets</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">Machinery tools</a>
+                            <a href="list.html" class="list-group-item list-group-item-action sidebar-link">More category</a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="hero-banner p-5 d-flex align-items-center h-100 desktop-only">
+                            <div class="ps-3">
+                                <h4 class="fw-normal">Latest trending</h4>
+                                <h1 class="fw-bold mb-4 display-5">Electronic items</h1>
+                                <button class="btn btn-light px-4 py-2 fw-bold shadow-sm">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="hero-banner p-3 d-md-none align-items-center h-100 mobile-hero-banner d-flex">
+                            <div class="ps-1">
+                                <h4 class="fw-normal mb-1">Latest trending</h4>
+                                <h1 class="fw-bold mb-3">Electronic items</h1>
+                                <button class="btn btn-light shadow-sm text-primary">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <div class="action-card user-card p-3 mb-2 rounded-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-circle me-2">
+                                    <i class="bi bi-person text-secondary"></i>
+                                </div>
+                                <p class="mb-0 small leading-tight">Hi, user<br>let's get started</p>
+                            </div>
+                            <button class="btn btn-primary w-100 btn-sm mb-2">Join now</button>
+                            <button class="btn btn-white border w-100 btn-sm text-primary">Log in</button>
+                        </div>
+                        <div class="action-card promo-orange p-3 mb-2 rounded-3 text-white">
+                            <p class="mb-0 small">Get US $10 off with a new supplier</p>
+                        </div>
+                        <div class="action-card promo-teal p-3 rounded-3 text-white">
+                            <p class="mb-0 small">Send quotes with supplier preferences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container-fluid px-xl-5 my-4 desktop-only">
+            <div class="p-3 bg-white border rounded shadow-sm d-flex flex-column h-100">
+                <div class="row g-0 flex-grow-1">
+                    <div class="col-lg-3 border-end p-3 d-flex flex-column justify-content-center h-100">
+                        <h5 class="fw-bold text-main mb-1">Deals and offers</h5>
+                        <p class="text-muted small mb-4">Hygiene equipments</p>
+                        <div class="d-flex gap-2 text-center countdown-group">
+                            <div class="time-block rounded">04<span class="d-block">Days</span></div>
+                            <div class="time-block rounded">13<span class="d-block">Hour</span></div>
+                            <div class="time-block rounded">34<span class="d-block">Min</span></div>
+                            <div class="time-block rounded">56<span class="d-block">Sec</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-0 h-100">
+                            <div class="col p-3 text-center border-end product-card">
+                                <div class="img-wrap mb-3"><img src="images/11.png" alt="Smart watches"></div>
+                                <p class="mb-1 product-title">Smart watches</p>
+                                <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                            </div>
+                            <div class="col p-3 text-center border-end product-card">
+                                <div class="img-wrap mb-3"><img src="images/image 34.png" alt="Laptops"></div>
+                                <p class="mb-1 product-title">Laptops</p>
+                                <span class="badge rounded-pill bg-danger-light text-danger">-15%</span>
+                            </div>
+                            <div class="col p-3 text-center border-end product-card">
+                                <div class="img-wrap mb-3"><img src="images/10.png" alt="GoPro camera"></div>
+                                <p class="mb-1 product-title">GoPro camera</p>
+                                <span class="badge rounded-pill bg-danger-light text-danger">-40%</span>
+                            </div>
+                            <div class="col p-3 text-center border-end product-card">
+                                <div class="img-wrap mb-3"><img src="images/image 29.png" alt="Headphones"></div>
+                                <p class="mb-1 product-title">Headphones</p>
+                                <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                            </div>
+                            <div class="col p-3 text-center product-card">
+                                <div class="img-wrap mb-3"><img src="images/image 23.png" alt="Canon cameras"></div>
+                                <p class="mb-1 product-title">Canon cameras</p>
+                                <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="mobile-block d-md-none border-top pb-0">
+            <div class="deals-title-row">
+                <div>
+                    <h5>Deals and offers</h5>
+                    <p>Electronic equipments</p>
+                </div>
+                <div class="d-flex gap-2 text-center countdown-mini">
+                    <div class="time-block">13<span class="d-block">Hour</span></div>
+                    <div class="time-block">34<span class="d-block">Min</span></div>
+                    <div class="time-block">56<span class="d-block">Sec</span></div>
+                </div>
+            </div>
+            <div class="horizontal-product-list px-0 d-flex text-center mb-0 pb-3">
+                <div class="h-product-item border-0 flex-grow-1" style="width: auto;">
+                    <img src="images/11.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0 flex-grow-1"
+                    style="width: auto;">
+                    <img src="images/image 29.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0 flex-grow-1"
+                    style="width: auto;">
+                    <img src="images/image 34.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <span class="badge rounded-pill bg-danger-light text-danger">-25%</span>
+                </div>
+            </div>
+        </section>
+        <section class="mobile-block d-md-none border-top border-bottom pb-0">
+            <h5 class="title-only-row">Home and outdoor</h5>
+            <div class="horizontal-product-list px-0">
+                <div class="h-product-item border-0">
+                    <img src="images/image 93.png" alt="">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0">
+                    <img src="images/1.png" alt="">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0">
+                    <img src="images/6.png" alt="">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+            </div>
+            <a href="list.html" class="source-now-link">Source now <i class="bi bi-arrow-right"></i></a>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-4 desktop-only">
+            <div class="category-grid-container border rounded bg-white overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-3 category-side-banner home-outdoor-bg p-4">
+                        <h5 class="fw-bold mb-3 w-50">Home and outdoor</h5>
+                        <button class="btn btn-white bg-white fw-bold btn-sm px-3 shadow-sm" onclick="window.location.href='list.html'">Source now</button>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-0">
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Soft chairs</p><small class="text-muted">From <br>USD 19</small>
+                                    </div>
+                                    <img src="images/1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Sofa & chair</p><small class="text-muted">From <br>USD
+                                            19</small>
+                                    </div>
+                                    <img src="images/6.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Mattress</p><small class="text-muted">From <br>USD 19</small>
+                                    </div>
+                                    <img src="images/image 93.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Smart watches</p><small class="text-muted">From <br>USD
+                                            19</small>
+                                    </div>
+                                    <img src="images/3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Kitchen mixer</p><small class="text-muted">From <br>USD
+                                            100</small>
+                                    </div>
+                                    <img src="images/9.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Blenders</p><small class="text-muted">From <br>USD 39</small>
+                                    </div>
+                                    <img src="images/8.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Home appliance</p><small class="text-muted">From <br>USD
+                                            19</small>
+                                    </div>
+                                    <img src="images/7.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Plants</p><small class="text-muted">From <br>USD
+                                            10</small>
+                                    </div>
+                                    <img src="images/image 89.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-block d-md-none border-top border-bottom pb-0">
+            <h5 class="title-only-row">Consumer electronics</h5>
+            <div class="horizontal-product-list px-0 d-flex text-center mb-0">
+                <div class="h-product-item border-0 flex-grow-1" style="width: auto;">
+                    <img src="images/image 33.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0 flex-grow-1"
+                    style="width: auto;">
+                    <img src="images/image 32.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+                <div class="h-product-item border-start border-end-0 border-top-0 border-bottom-0 rounded-0 flex-grow-1"
+                    style="width: auto;">
+                    <img src="images/image 34.png" alt="" class="mx-auto">
+                    <p>Smart watches</p>
+                    <small class="text-muted">From USD 19</small>
+                </div>
+            </div>
+            <a href="list.html" class="source-now-link">Source now <i class="bi bi-arrow-right"></i></a>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-4 desktop-only">
+            <div class="category-grid-container border rounded bg-white overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-3 category-side-banner electronics-bg p-4">
+                        <h5 class="fw-bold mb-3 w-75">Consumer electronics and gadgets</h5>
+                        <button class="btn btn-white bg-white fw-bold btn-sm px-3 shadow-sm" onclick="window.location.href='list.html'">Source now</button>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-0">
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Smart watches</p><small class="text-muted">From <br>USD
+                                            19</small>
+                                    </div>
+                                    <img src="images/11.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Cameras</p><small class="text-muted">From <br>USD 89</small>
+                                    </div>
+                                    <img src="images/10.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Headphones</p><small class="text-muted">From <br>USD 10</small>
+                                    </div>
+                                    <img src="images/image 86.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-bottom grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Electric Kettle</p><small class="text-muted">From <br>USD
+                                            90</small>
+                                    </div>
+                                    <img src="images/image 85.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Gaming set</p><small class="text-muted">From <br>USD 35</small>
+                                    </div>
+                                    <img src="images/image 29.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Laptops & PC</p><small class="text-muted">From <br>USD
+                                            340</small>
+                                    </div>
+                                    <img src="images/image 34.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 border-end grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">Smartphones</p><small class="text-muted">From <br>USD 19</small>
+                                    </div>
+                                    <img src="images/image 32.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 p-3 grid-item">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="mb-0">IPhone</p><small class="text-muted">From <br>USD
+                                            240</small>
+                                    </div>
+                                    <img src="images/image 33.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-md-none">
+            <div class="quote-banner p-4 text-white d-flex flex-column align-items-start overflow-hidden rounded-0"
+                style="background-position: center; min-height: 200px;">
+                <h5 class="fw-bold mb-3 pb-2 pt-2">An easy way to send <br> requests to all suppliers</h5>
+                <button class="btn btn-primary btn-sm px-3 mt-2 rounded-1" style="height: 35px;">Send inquiry</button>
+            </div>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-5 desktop-only">
+            <div class="quote-banner rounded-3 overflow-hidden">
+                <div class="row g-0 h-100">
+                    <div class="col-lg-7 p-5 text-white d-flex flex-column align-items-start justify-content-start">
+                        <h2 class="fw-bold mb-3 display-6">An easy way to send <br> requests to all suppliers</h2>
+                        <p class="mb-0 opacity-75 d-none d-md-block" style="max-width: 440px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5 p-4 d-flex align-items-center">
+                        <div class="bg-white p-4 rounded-3 shadow-sm w-100"
+                            style="max-width: 490px; margin-left: auto;">
+                            <h5 class="fw-bold mb-4">Send quote to suppliers</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="What item you need?">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="3" placeholder="Type more details"></textarea>
+                                </div>
+                                <div class="row g-2 mb-4">
+                                    <div class="col-7">
+                                        <input type="number" class="form-control" placeholder="Quantity">
+                                    </div>
+                                    <div class="col-5">
+                                        <select class="form-select">
+                                            <option selected>Pcs</option>
+                                            <option>Kg</option>
+                                            <option>Litre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary px-4">Send inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-block d-md-none bg-transparent">
+            <h5 class="title-only-row bg-transparent pb-3">Recommended items</h5>
+            <div class="mobile-grid">
+                <div class="grid-card">
+                    <img src="images/Bitmap.png" alt="">
+                    <p class="price mb-1 text-dark fw-bold">$10.30</p>
+                    <p class="desc text-muted">T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="grid-card">
+                    <img src="images/image 30.png" alt="">
+                    <p class="price mb-1 text-dark fw-bold">$10.30</p>
+                    <p class="desc text-muted">T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="grid-card">
+                    <img src="images/image 26.png" alt="">
+                    <p class="price mb-1 text-dark fw-bold">$10.30</p>
+                    <p class="desc text-muted"></p>
+                </div>
+                <div class="grid-card">
+                    <img src="images/image 10.png" alt="" onerror="this.src='images/3.png'">
+                    <p class="price mb-1 text-dark fw-bold">$10.30</p>
+                    <p class="desc text-muted"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-5 desktop-only">
+            <h4 class="fw-bold mb-4">Recommended items</h4>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/Bitmap.png" class="card-img-top" alt="T-shirts">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$10.30</h5>
+                            <p class="text-muted small mb-0">T-shirts with multiple colors, for men</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/2 1.png" class="card-img-top" alt="Jeans shorts">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$10.30</h5>
+                            <p class="text-muted small mb-0">Jeans shorts for men blue color</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 30.png" class="card-img-top" alt="Winter coat">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$12.50</h5>
+                            <p class="text-muted small mb-0">Brown winter coat medium size</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 24.png" class="card-img-top" alt="Travel bag">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$34.00</h5>
+                            <p class="text-muted small mb-0">Jeans bag for travel for men</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 26.png" class="card-img-top" alt="Leather wallet">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$99.00</h5>
+                            <p class="text-muted small mb-0">Leather wallet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/Bitmap (2).png" class="card-img-top" alt="Canon camera">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$9.99</h5>
+                            <p class="text-muted small mb-0">Canon camera black, 100x zoom</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 86.png" class="card-img-top" alt="Headset">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$8.99</h5>
+                            <p class="text-muted small mb-0">Headset for gaming with mic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 26.png" class="card-img-top" alt="Smartwatch">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$10.30</h5>
+                            <p class="text-muted small mb-0">Smartwatch silver color modern</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/3.png" class="card-img-top" alt="Blue wallet">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$10.30</h5>
+                            <p class="text-muted small mb-0">Blue wallet for men leather metarfial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 recommended-card border-0 shadow-sm p-3">
+                        <div class="img-container mb-3">
+                            <img src="images/image 85.png" class="card-img-top" alt="Electric kettle">
+                        </div>
+                        <div class="card-body p-0">
+                            <h5 class="fw-bold mb-1">$80.95</h5>
+                            <p class="text-muted small mb-0">Jeans bag for travel for men</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-5">
+            <h4 class="fw-bold mb-4">Our extra services</h4>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="position-relative">
+                            <img src="images/Mask group.png" class="card-img-top service-img" alt="Industry Hubs">
+                            <div class="service-icon-circle">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                        <div class="card-body py-3">
+                            <p class="card-text fw-medium mb-0">Source from <br> Industry Hubs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="position-relative">
+                            <img src="images/Mask group (1).png" class="card-img-top service-img" alt="Customization">
+                            <div class="service-icon-circle">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                        </div>
+                        <div class="card-body py-3">
+                            <p class="card-text fw-medium mb-0">Customize Your <br> Products</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="position-relative">
+                            <img src="images/image 106.png" class="card-img-top service-img" alt="Shipping">
+                            <div class="service-icon-circle">
+                                <i class="bi bi-send"></i>
+                            </div>
+                        </div>
+                        <div class="card-body py-3">
+                            <p class="card-text fw-medium mb-0">Fast, reliable shipping <br> by ocean or air</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="position-relative">
+                            <img src="images/image 107.png" class="card-img-top service-img" alt="Monitoring">
+                            <div class="service-icon-circle">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                        </div>
+                        <div class="card-body py-3">
+                            <p class="card-text fw-medium mb-0">Product monitoring <br> and inspection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid px-xl-5 my-5">
+            <h4 class="fw-bold mb-4">Suppliers by region</h4>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                <div class="col">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="images/AE@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Arabic Emirates</p>
+                            <small class="text-muted">shopname.ae</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="images/DK@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Denmark</p>
+                            <small class="text-muted">denmark.com.dk</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="images/icon.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Australia</p>
+                            <small class="text-muted">shopname.ae</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="images/FR@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">France</p>
+                            <small class="text-muted">shopname.com.fr</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="images/US@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">United States</p>
+                            <small class="text-muted">shopname.ae</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="images/AE@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Arabic Emirates</p>
+                            <small class="text-muted">shopname.ae</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="images/RU@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Russia</p>
+                            <small class="text-muted">shopname.ru</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="images/CN@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">China</p>
+                            <small class="text-muted">shopname.ae</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="images/IT@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Italy</p>
+                            <small class="text-muted">shopname.it</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="images/GB@2x.png" alt="" class="flag-icon me-2">
+                        <div>
+                            <p class="mb-0 small">Great Britain</p>
+                            <small class="text-muted">shopname.co.uk</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="newsletter-section py-5 text-center">
+        <div class="container">
+            <h4 class="fw-bold mb-1">Subscribe on our newsletter</h4>
+            <p class="text-secondary mb-4">Get daily news on upcoming offers from many suppliers all over the world</p>
+            <div class="d-flex justify-content-center">
+                <div class="input-group" style="max-width: 400px;">
+                    <span class="input-group-text bg-white border-end-0 text-secondary"><i
+                            class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control border-start-0" placeholder="Email">
+                    <button class="btn btn-primary px-4 ms-2 rounded">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-5">
+        <div class="container-fluid px-xl-5">
+            <div class="row mb-5">
+                <div class="col-lg-3 mb-4">
+                    <img src="images/logo-colored.png" alt="Brand" class="brand-logo mb-3">
+                    <p class="text-secondary pe-lg-5">Best information about the company goes here but now lorem ipsum
+                        is</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Partnership</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Information</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-1 mb-4">
+                    <h6 class="fw-bold mb-3">For users</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h6 class="fw-bold mb-3">Get app</h6>
+                    <a href="#" class="d-block mb-2"><img src="images/market-button.png" width="120"
+                            alt="App Store"></a>
+                    <a href="#" class="d-block"><img src="images/Group.png" width="120" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light border-top py-3">
+            <div class="container-fluid px-xl-5 d-flex justify-content-between align-items-center">
+                <p class="mb-0 text-secondary">© 2023 Ecommerce.</p>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-dark d-flex align-items-center fw-medium" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" id="headerLanguageDropdown">
+                        <img src="images/us@2x.png" alt="" class="me-2 selected-img"
+                            style="width:20px; height:15px; object-fit: cover;">
+                        <span>English</span>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm overflow-auto"
+                        style="max-height: 400px; min-width: 200px;">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/DE@2x.png"
+                                    class="me-2" style="width:20px;"> Germany</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/AE@2x.png"
+                                    class="me-2" style="width:20px;"> Arabic Emirates</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/icon.png"
+                                    class="me-2" style="width:20px;"> Australia</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/us@2x.png"
+                                    class="me-2" style="width:20px;"> United States</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/ru@2x.png"
+                                    class="me-2" style="width:20px;"> Russia</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/it@2x.png"
+                                    class="me-2" style="width:20px;"> Italy</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/dk@2x.png"
+                                    class="me-2" style="width:20px;"> Denmark</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/fr@2x.png"
+                                    class="me-2" style="width:20px;"> France</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/cn@2x.png"
+                                    class="me-2" style="width:20px;"> China</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/gb@2x.png"
+                                    class="me-2" style="width:20px;"> Great Britain</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
